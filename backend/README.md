@@ -32,10 +32,12 @@ cp env.example .env
 
 ## Buat tambahin services di folder /services
 
-export langsung fungsi nya aja, nanti tinggal di pake di endpoint tergantung kebutuhan sama frontend nya misal `http://127.0.0.1:8000/docs`
+Export langsung fungsi nya aja, nanti tinggal di pake di endpoint tergantung kebutuhan sama frontend nya misal `http://127.0.0.1:8000/docs`
+
 
 # Note
-
 1. Kalo install dependency baru (dari service) tambahin di `requirements.txt`
 2. kalo ada variabel secret (API key, dll) tambahin di `.env` sama `.env.example` (git ignore .env, BUKAN .env.example)
 3. rekomennya pake virtual env python
+
+`Untuk input bisa di /docs dengan cuma try out, response nya dalam json dibawahnya`

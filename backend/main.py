@@ -27,7 +27,7 @@ app.include_router(
     tags=["auth"],
 )
 
-app.include_router(users.router, prefix="/api", tags=["users"])
+app.include_router(users.router, prefix="/api", tags=["users"])   # ⬅️ masukkan router health
 
 
 @app.on_event("startup")
@@ -37,4 +37,4 @@ async def on_startup():
 
 @app.get("/")
 async def root():
-    return {"message": "Oke mase"}
+    return {"message": "API is running successfully"}
