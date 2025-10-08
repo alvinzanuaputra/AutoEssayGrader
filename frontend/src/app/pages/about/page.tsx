@@ -33,7 +33,7 @@ export default function AboutPage() {
     },
     {
       name: "Nadin Nabil Hafizh Ayyasy",
-      role: "FRONTEND",
+      role: "ARTIFICIAL INTELLIGENCE",
       image: "/images/team/hafizh.jpg",
       instagram: "#",
       linkedin: "#",
