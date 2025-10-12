@@ -1,0 +1,13 @@
+# Computer Vision & Image Processing
+opencv-python
+cvzone
+numpy
+Pillow
+matplotlib
+
+# PDF Processing
+PyMuPDF
+
+# Machine Learning / Deep Learning
+transformers
+torch

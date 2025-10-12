@@ -2,6 +2,7 @@ from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.orm import sessionmaker
 from fastapi_users.db import SQLAlchemyUserDatabase
 from models.user_model import Base, User
+from models import class_model  # Import to register tables
 import os
 from dotenv import load_dotenv
 
@@ -28,4 +29,11 @@ async def get_user_db():
 
 async def create_tables():
     async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.create_all)
+
+
+async def reset_tables():
+    """Drop all tables and recreate them - USE WITH CAUTION!"""
+    async with engine.begin() as conn:
+        await conn.run_sync(Base.metadata.drop_all)
         await conn.run_sync(Base.metadata.create_all)
