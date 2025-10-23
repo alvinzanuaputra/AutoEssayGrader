@@ -11,19 +11,23 @@ jose
 passlib[bcrypt]
 
 # ocr
-opencv-python
-cvzone
-numpy
-Pillow
-matplotlib
-PyMuPDF
-transformers
-torch
+# opencv-python
+# cvzone
+# numpy
+# Pillow
+# matplotlib
+# PyMuPDF
+# transformers
+# torch
 
 # graders ai
-fastapi
-uvicorn
+# fastapi
+# uvicorn
 requests
-pydantic
-bert-score
-sentence-transformers
+# pydantic
+# bert-score
+# sentence-transformers
+
+sqlalchemy
+psycopg2-binary
+asyncpg
