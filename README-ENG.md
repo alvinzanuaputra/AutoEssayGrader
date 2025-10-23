@@ -4,7 +4,6 @@
 
 ## 📋 Table of Contents
 
-- [Project Description](#-project-description)
 - [Development Team](#-development-team)
 - [Technologies Used](#-technologies-used)
 - [Project Structure](#-project-structure)

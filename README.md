@@ -4,7 +4,6 @@
 
 ## 📋 Daftar Isi
 
-- [Deskripsi Project](#-deskripsi-project)
 - [Tim Pengembang](#-tim-pengembang)
 - [Teknologi yang Digunakan](#-teknologi-yang-digunakan)
 - [Struktur Project](#-struktur-project)
