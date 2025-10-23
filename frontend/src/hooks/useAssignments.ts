@@ -1,10 +1,12 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import {
 	assignmentService,
+} from "@/services";
+import {
 	CreateAssignmentRequest,
 	UpdateAssignmentRequest,
 	SubmitAnswerRequest,
-} from "@/services";
+} from "@/types";
 import toast from "react-hot-toast";
 
 // Query keys

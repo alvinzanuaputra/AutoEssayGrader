@@ -142,7 +142,14 @@ export interface CreateAssignmentRequest {
     deadline?: string;
     max_score?: number;
     minimal_score?: number;
-    questions?: string; // Questions as a string (can contain multiple questions)
+    questions?: QuestionCreate[]; // Questions as an array of QuestionCreate objects
+}
+
+export interface QuestionUpdate {
+    id?: number;
+    question_text?: string;
+    reference_answer?: string;
+    points?: number;
 }
 
 export interface UpdateAssignmentRequest {
@@ -153,14 +160,13 @@ export interface UpdateAssignmentRequest {
     max_score?: number;
     minimal_score?: number;
     is_published?: boolean;
-    questions?: string; // Questions as a string
+    questions?: QuestionUpdate[]; // Questions as an array of QuestionUpdate objects
 }
 
 export interface QuestionCreate {
     question_text: string;
     reference_answer: string;
-    question_order: number;
-    points: number;
+    points?: number; // Optional with default value of 10 in backend
 }
 
 export interface Question {
@@ -223,12 +229,24 @@ export interface MySubmissionResponse {
         answer_text: string;
         final_score?: number;
         feedback?: string;
+        rubric_pemahaman?: number;
+        rubric_kelengkapan?: number;
+        rubric_kejelasan?: number;
+        rubric_analisis?: number;
+        rubric_rata_rata?: number;
+        embedding_similarity?: number;
     }>;
     total_score?: number;
     max_score?: number;
     percentage?: number;
     graded?: boolean;
     submission?: SubmissionResponse;
+    avg_pemahaman?: number;
+    avg_kelengkapan?: number;
+    avg_kejelasan?: number;
+    avg_analisis?: number;
+    avg_embedding_similarity?: number;
+    graded_at?: string;
 }
 
 // ==================== GRADING TYPES ====================

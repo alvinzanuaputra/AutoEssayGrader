@@ -56,7 +56,7 @@ export const assignmentService = {
   ): Promise<{ message: string; submission_id: number; extracted_text: string }> => {
     const formData = new FormData();
     formData.append("file", file);
-    
+
     return apiClient.uploadFile<{
       message: string;
       submission_id: number;
@@ -72,6 +72,11 @@ export const assignmentService = {
   // Get current user's submission for an assignment
   getMySubmission: async (assignmentId: number): Promise<MySubmissionResponse> => {
     return apiClient.get<MySubmissionResponse>(`/api/assignments/${assignmentId}/my-submission`);
+  },
+
+  // Cancel/delete current user's submission for an assignment
+  cancelMySubmission: async (assignmentId: number): Promise<{ message: string }> => {
+    return apiClient.delete<{ message: string }>(`/api/assignments/${assignmentId}/my-submission`);
   },
 };
 

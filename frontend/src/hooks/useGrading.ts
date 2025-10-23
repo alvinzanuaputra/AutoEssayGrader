@@ -1,5 +1,6 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { gradingService, GradeSubmissionRequest } from "@/services";
+import { gradingService } from "@/services";
+import { GradeSubmissionRequest } from "@/types";
 import toast from "react-hot-toast";
 
 // Query keys
